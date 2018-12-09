@@ -1,0 +1,78 @@
+{
+  "info": {
+    "_postman_id": "8a1ed158-71ea-40dd-b91d-393972dcdb72",
+    "name": "Leaderboard",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "campeones",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8080/leaderboard/campeones",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "leaderboard",
+            "campeones"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "especieLider",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8080/leaderboard/especieLider",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "leaderboard",
+            "especieLider"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "lideres",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8080/leaderboard/lideres",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "leaderboard",
+            "lideres"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

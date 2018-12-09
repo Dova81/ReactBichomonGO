@@ -1,0 +1,215 @@
+{
+  "info": {
+    "_postman_id": "b174d023-4b3e-4046-8797-4ba2c8ab1596",
+    "name": "Mapa",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "crearUbicacion",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"type\": \"Guarderia\",\n    \"nombre\": \"UNQ\"\n}"
+        },
+        "url": {
+          "raw": "localhost:8080/mapa/",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "mapa",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "mover",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8080/mapa/mover/Lucas/Plantalandia",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "mapa",
+            "mover",
+            "Lucas",
+            "Plantalandia"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "moverMasCorto",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8080/mapa/moverCorto/Ash/Plantalandia",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "mapa",
+            "moverCorto",
+            "Ash",
+            "Plantalandia"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "conectados",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8080/mapa/conectados/Poke/Terrestre",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "mapa",
+            "conectados",
+            "Poke",
+            "Terrestre"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "conectar",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8080/mapa/conectar/Poke/Tibet Dojo/Terrestre",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "mapa",
+            "conectar",
+            "Poke",
+            "Tibet Dojo",
+            "Terrestre"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "cantidadEntrenadores",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8080/mapa/cantidad/Poke/",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "mapa",
+            "cantidad",
+            "Poke",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "campeon",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8080/mapa/campeon/Tibet Dojo/",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "mapa",
+            "campeon",
+            "Tibet Dojo",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "campeonHistorico",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8080/mapa/campeonHistorico/Tibet Dojo/",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "mapa",
+            "campeonHistorico",
+            "Tibet Dojo",
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

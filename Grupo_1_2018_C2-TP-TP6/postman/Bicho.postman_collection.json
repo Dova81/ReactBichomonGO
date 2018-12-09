@@ -1,0 +1,131 @@
+{
+  "info": {
+    "_postman_id": "ffbadf1f-8417-47ac-8e60-453dc45ce139",
+    "name": "Bicho",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "buscar",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8080/bichos/buscar/Lucas",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "bichos",
+            "buscar",
+            "Lucas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "abandonar",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8080/bichos/abandonar/Lucas/6",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "bichos",
+            "abandonar",
+            "Lucas",
+            "6"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "duelo",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8080/bichos/duelo/Andrea/9",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "bichos",
+            "duelo",
+            "Andrea",
+            "9"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "puedeEvolucionar",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8080/bichos/puedeEvolucionar/8",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "bichos",
+            "puedeEvolucionar",
+            "8"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "evolucionar",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8080/bichos/evolucionar/8",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "bichos",
+            "evolucionar",
+            "8"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "info": {
+    "_postman_id": "d614d247-8caf-409f-bfea-c52787692b51",
+    "name": "Especie",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "crear",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"nombre\": \"Persistemon\",\n    \"tipo\": \"FUEGO\",\n    \"energiaInicial\": 333\n}"
+        },
+        "url": {
+          "raw": "localhost:8080/especies/",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "especies",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "todas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8080/especies/",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "especies",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "porNombre",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8080/especies/Amarillomon",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "especies",
+            "Amarillomon"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "crearBicho",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8080/especies/bicho/Amarillomon",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "especies",
+            "bicho",
+            "Amarillomon"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "populares",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8080/especies/populares",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "especies",
+            "populares"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "impopulares",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8080/especies/impopulares",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "especies",
+            "impopulares"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
