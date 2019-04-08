@@ -9,29 +9,14 @@ export class PrimerDivMedio extends Component {
     
   render() {
 
-    function insertarImg(img1,img2,img3){ 
-        let imagenes = [];
-        imagenes.push(img1);
-        imagenes.push(img2);
-        imagenes.push(img3);
-        console.log(imagenes);
-        
-        imagenes.forEach(element => {
-            return (<img src={ require(''+element.className)  } alt="" className="ajustar" />)
-        });
-    }
-
     return (
-      <div className="container">
-            <div className="row">
-                <div className="col-xs-12 divBorder">
+      
+                <div className="col-lg-5 divBorder noPadding">
                 <img src={ require("./Css/Bichomones/Nisman.jpg")  } alt="" className="ajustarGim" />
                 <img src={ require("./Css/Bichomones/RicardoFort.jpg")  } alt="" className="ajustarGim" />
                 <img src={ require("./Css/Bichomones/RicardoMilos.jpg")  } alt="" className="ajustarGim" />
-
                 </div>
-            </div>  
-      </div>
+
     );
   }
 }

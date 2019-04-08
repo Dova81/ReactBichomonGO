@@ -32,11 +32,49 @@
   float: left;
 }
 
-
-
-.col-lg-6{
+.noPadding{
   padding: 0%;
 }
+
+.topleft {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+  background-color: transparent;
+}
+
+.topright {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+  background-color: transparent;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 18px;
+  background-color: transparent;
+}
+
+
+
+.bottomright {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
+  background-color: transparent;
+}
+
+.superponer {
+  position: relative;
+}
+
+
 
 
 @keyframes App-logo-spin {
