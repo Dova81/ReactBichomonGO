@@ -28,6 +28,13 @@ public class BichoService {
         this.bichoDAO = bichoDAO;
     }
 
+
+    @GetMapping("/buscar/{entrenador}")
+    public Entrenador buscarEntrenador(@PathVariable String entrenador) {
+        Entrenador e = entrenadorDAO.findByNombre(entrenador);
+        return e;
+    }
+
     @PutMapping("/buscar/{entrenador}")
     public Bicho buscar(@PathVariable String entrenador) {
         Entrenador e = entrenadorDAO.findByNombre(entrenador);
