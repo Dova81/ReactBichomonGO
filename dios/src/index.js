@@ -1,10 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux'
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {createStore} from 'redux'
+import ApiComponent from "./Components/ApiComponent"
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const initialState={
+  obj: {}
+}
+
+
+const reducer = (state=initialState,action) =>{ 
+    switch (action.type) {
+        case "SET":
+            return {...state,entrenador:action.payload};  
+            break;
+        default:
+            break;
+    }
+   return state
+}
+
+const store = createStore(reducer);
+
+
+ReactDOM.render(<Provider store={store}>
+                    <App/>
+                </Provider>    
+                , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

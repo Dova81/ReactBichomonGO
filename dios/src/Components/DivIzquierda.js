@@ -9,7 +9,7 @@ export class DivIzquierda extends Component {
     return (
       
               <div className="col-lg-3 noPadding">
-                <SegundoDiv/>
+                <SegundoDiv entrenador={this.props.entrenador}/>
                 <TercerDiv/>
               </div>
             
