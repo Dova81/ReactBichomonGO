@@ -50,6 +50,13 @@ public class Especie {
         this.energiaInicial = energia;
     }
 
+    public Especie(String nombre, TipoBicho tipo, int energia,String urlFoto) {
+        this.nombre = nombre;
+        this.tipo = tipo;
+        this.energiaInicial = energia;
+        this.urlFoto = urlFoto;
+    }
+
     public Especie(String nombre, TipoBicho tipo, int energia, Especie evolucion, Set<Condicion> condiciones) {
         this(nombre, tipo, energia);
         this.evolucion = evolucion;

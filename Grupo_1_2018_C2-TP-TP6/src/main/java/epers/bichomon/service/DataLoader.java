@@ -125,17 +125,17 @@ public class DataLoader implements ApplicationRunner {
     }
 
     private void createEspecies() {
-        especieDAO.save(new Especie("Rojomon", TipoBicho.FUEGO, 100));
-        especieDAO.save(new Especie("Amarillomon", TipoBicho.AIRE, 300));
-        especieDAO.save(new Especie("Verdemon", TipoBicho.PLANTA, 500));
-        especieDAO.save(new Especie("Violetamon", TipoBicho.TIERRA, 500));
+        especieDAO.save(new Especie("Rojomon", TipoBicho.FUEGO, 100,"https://wikimon.net/images/thumb/1/1b/Agumon_tri2.jpg/200px-Agumon_tri2.jpg"));
+        especieDAO.save(new Especie("Amarillomon", TipoBicho.AIRE, 300,"https://wikimon.net/images/thumb/1/1b/Agumon_tri2.jpg/200px-Agumon_tri2.jpg"));
+        especieDAO.save(new Especie("Verdemon", TipoBicho.PLANTA, 500,"https://i1.wp.com/blog.kippnj.org/wp-content/uploads/2017/08/jon-snow.jpg"));
+        especieDAO.save(new Especie("Violetamon", TipoBicho.TIERRA, 500,"https://avatarfiles.alphacoders.com/510/51068.jpg"));
         especieDAO.save(new Especie("Azulmon", TipoBicho.ELECTRICIDAD, 500));
-        especieDAO.save(new Especie("Naranjamon", TipoBicho.CHOCOLATE, 500));
-        especieDAO.save(new Especie("Marronmon", TipoBicho.AGUA, 500));
-        especieDAO.save(new Especie("Lilamon", TipoBicho.AIRE, 500));
+        especieDAO.save(new Especie("Naranjamon", TipoBicho.CHOCOLATE, 500,"https://cdnvos.lavoz.com.ar/sites/default/files/styles/width_1072/public/nota_periodistica/RF1.jpg"));
+        especieDAO.save(new Especie("Marronmon", TipoBicho.AGUA, 500,"https://bucket3.glanacion.com/anexos/fotos/87/2847787w380.jpg"));
+        especieDAO.save(new Especie("Lilamon", TipoBicho.AIRE, 500,"https://cdn.tn.com.ar/sites/default/files/styles/420x236/public/2019/04/07/mirtha.jpg"));
         especieDAO.save(new Especie("Celestemon", TipoBicho.AGUA, 500));
-        especieDAO.save(new Especie("Ocremon", TipoBicho.FUEGO, 500));
-        especieDAO.save(new Especie("Turquesamon", TipoBicho.PLANTA, 1500));
+        especieDAO.save(new Especie("Ocremon", TipoBicho.FUEGO, 500,"https://bucket2.glanacion.com/anexos/fotos/84/2858084w380.jpg"));
+        especieDAO.save(new Especie("Turquesamon", TipoBicho.PLANTA, 1500,"https://media.eldestapeweb.com/adjuntos/177/imagenes/000/627/0000627332.jpg"));
 
         Especie Dragonmon = especieDAO.save(new Especie("Dragonmon", TipoBicho.FUEGO, 10));
         Especie Reptilomon = especieDAO.save(new Especie("Reptilomon", TipoBicho.FUEGO, 10,
