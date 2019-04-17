@@ -7,9 +7,6 @@ import {PrimerDivMedio} from "./Components/PrimerDivMedio";
 import { connect } from 'react-redux';
 
 class App extends Component {
-  constructor(){
-    super();
-  }
 
   componentDidMount(){
     ApiComponent.getEntrenador('/entrenador/Lucas')
@@ -27,7 +24,7 @@ class App extends Component {
             
             { this.props.user && <DivIzquierda entrenador={this.props.user}/>}
             
-            <PrimerDivMedio/>
+            { this.props.user && <PrimerDivMedio pokes={this.props.user}/>}
             <DivDerecha/>
       
       </div>
@@ -37,10 +34,13 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => {
+  
   return{
-    user: state.entrenador
+    user: state.entrenador,  
   };
+  
 };
+
 
 export default connect(mapStateToProps)(App)
 

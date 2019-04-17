@@ -5,7 +5,6 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {createStore} from 'redux'
-import ApiComponent from "./Components/ApiComponent"
 
 const initialState={
   obj: {}

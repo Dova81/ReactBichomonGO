@@ -103,7 +103,8 @@ public class DataLoader implements ApplicationRunner {
 
         b1 = crearBicho("Amarillomon");
         b2 = crearBicho("Amarillomon");
-        newEntrenador("Lucas", "Poke", new HashSet<>(Arrays.asList(b1, b2)));
+        Bicho b3 = crearBicho("Naranjamon");
+        newEntrenador("Lucas", "Poke", new HashSet<>(Arrays.asList(b1, b2,b3)));
         bichoService.abandonar("Lucas", b1.getID());
 
         b1 = crearBicho("Naranjamon");
