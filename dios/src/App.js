@@ -1,47 +1,31 @@
 import React, { Component } from 'react';
 import './App.css';
 import ApiComponent from "./Components/ApiComponent"
-import {DivIzquierda} from "./Components/DivIzquierda";
-import {DivDerecha} from "./Components/DivDerecha";
-import {PrimerDivMedio} from "./Components/PrimerDivMedio";
-import { connect } from 'react-redux';
 
-class App extends Component {
+import {Router, Route} from "react-router";
+import {PagStats} from "./Components/PagStats"
+import {Selector} from "./Components/Selector"
 
-  componentDidMount(){
-    ApiComponent.getEntrenador('/entrenador/Lucas')
-    .then(responder =>this.props.dispatch({
-      type:"SET",
-      payload:responder
-    }))
-   }
-    
+
+export class App extends Component {
+
 
   render() {
     return (
-     
+
+
+      <Router>
       <div>
-            
-            { this.props.user && <DivIzquierda entrenador={this.props.user}/>}
-            
-            { this.props.user && <PrimerDivMedio pokes={this.props.user}/>}
-            <DivDerecha/>
-      
+        <Route path={"/"} component={Selector}/>
       </div>
-      
+      </Router>  
     );
   }
 }
 
-const mapStateToProps = (state) => {
-  
-  return{
-    user: state.entrenador,  
-  };
-  
-};
 
 
-export default connect(mapStateToProps)(App)
+
+export default App
 
 
