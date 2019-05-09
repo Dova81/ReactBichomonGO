@@ -9,14 +9,7 @@ import {Router, Route} from "react-router"
 
 export class PagStats extends Component {
 
-  componentDidMount(){
-    ApiComponent.getEntrenador('/entrenador/Lucas')
-    .then(responder =>this.props.dispatch({
-      type:"SET",
-      payload:responder
-    }))
-   }
-    
+  
 
   render() {
     return (
@@ -35,7 +28,6 @@ export class PagStats extends Component {
 }
 
 const mapStateToProps = (state) => {
-  
   return{
     user: state.entrenador,  
   };

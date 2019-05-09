@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import ApiComponent from "./Components/ApiComponent"
 
-import {Router, Route} from "react-router";
+import {BrowserRouter} from "react-router-dom";
+import { Switch, Route } from 'react-router';
 import {PagStats} from "./Components/PagStats"
 import {Selector} from "./Components/Selector"
 
@@ -14,11 +15,14 @@ export class App extends Component {
     return (
 
 
-      <Router>
-      <div>
-        <Route path={"/"} component={Selector}/>
-      </div>
-      </Router>  
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" render={proops => <Selector {...proops} />} />
+          <Route exact path={"/entrenador"} render={proops => <PagStats {...proops} />} />
+        </Switch>
+      </BrowserRouter>  
+
+      
     );
   }
 }

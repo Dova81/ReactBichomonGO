@@ -15,7 +15,6 @@ const reducer = (state=initialState,action) =>{
     switch (action.type) {
         case "SET":
             return {...state,entrenador:action.payload};  
-            break;
         default:
             break;
     }
