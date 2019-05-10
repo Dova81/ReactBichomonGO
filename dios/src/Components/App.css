@@ -84,8 +84,12 @@
 }
 
 .pixel{
-  font-size: 75%;
-  font-family: 'Press Start 2P' 
+  font-size: 60%;
+  font-family: 'Press Start 2P';
+}
+
+br{
+  margin: 5px
 }
 
 .centrarSelector {

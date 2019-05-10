@@ -29,15 +29,13 @@ class Selector extends Component {
 
     this.state.entrenador = elem.target.value;
     
-    
-    
-
     this.componentDidMount();
 
     this.props.history.push("/entrenador")    
 }
 
    entrenadores() {
+
     const pronvincias = ["Elegir entrenador","Lucas", "Pedro", "Ash", "Misty", "Pepe", "Alberto", "Julio", "Andrea", "Ana"]
     return pronvincias.map(prov => <option>{prov}</option>);
 }

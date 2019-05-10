@@ -18,7 +18,7 @@ export class SegundoDiv extends Component {
           Entrenador:{ this.props.entrenador.nombre}<br/>
           Ubicacion:{this.props.entrenador.ubicacion.nombre}<br/>
           Nivel:{this.props.entrenador.nivel}<br/>
-          Billetera:{this.props.entrenador.monedas}
+          Billetera:{this.props.entrenador.monedas}<br/>
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ export class SegundoDivDerecha extends Component {
     return (
       
     <div className="noPadding divBorder">
-       <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+       <br/><br/><br/><br/><br/><br/><br/><br/><br/>
     </div>
  
     );
