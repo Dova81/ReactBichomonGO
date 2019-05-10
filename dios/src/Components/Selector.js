@@ -19,7 +19,10 @@ export class Selector extends Component {
     const entrenadorElegido = this.state.entrenador
     
     ApiComponent.getEntrenador('/entrenador/'+entrenadorElegido)
-    .then(responder =>this.props.setEntrenador())
+    .then(responder =>this.props.dispatch({
+      type:"SET",
+      payload:responder
+    }))
    }
 
    setEntrenador(elem){
@@ -58,21 +61,4 @@ const mapStateToProps = (state) => {
   
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return{
-    setEntrenador: (name) =>{
-      dispatch({
-        type:"SET",
-        payload:name,
-        
-      })
-    }
-  }
-}
-
-
-/*const mapDispatchToProps = {
-  crear
-}
-*/
 export default connect(mapStateToProps)(Selector)
