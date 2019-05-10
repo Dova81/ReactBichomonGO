@@ -11,17 +11,20 @@ import {Selector} from "./Components/Selector"
 export class App extends Component {
 
 
+  constructor(props){
+    super(props);
+  }
+
   render() {
     return (
 
-
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/" render={proops => <Selector {...proops} />} />
-          <Route exact path={"/entrenador"} render={proops => <PagStats {...proops} />} />
-        </Switch>
-      </BrowserRouter>  
-
+     
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" render={(props) => <Selector {...props} />} />
+            <Route exact path={"/entrenador"} render={(props) => <PagStats {...props} />} />
+          </Switch>
+        </BrowserRouter>  
       
     );
   }

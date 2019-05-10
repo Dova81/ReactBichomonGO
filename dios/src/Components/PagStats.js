@@ -9,7 +9,10 @@ import {Router, Route} from "react-router"
 
 export class PagStats extends Component {
 
-  
+  constructor(props) {
+    super(props);
+
+}
 
   render() {
     return (
