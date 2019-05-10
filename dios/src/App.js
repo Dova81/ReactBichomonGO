@@ -4,11 +4,12 @@ import ApiComponent from "./Components/ApiComponent"
 
 import {BrowserRouter} from "react-router-dom";
 import { Switch, Route } from 'react-router';
-import {PagStats} from "./Components/PagStats"
-import {Selector} from "./Components/Selector"
+import PagStats from "./Components/PagStats"
+import Selector from "./Components/Selector"
+import { connect } from 'react-redux';
 
 
-export class App extends Component {
+class App extends Component {
 
 
   constructor(props){
@@ -32,7 +33,6 @@ export class App extends Component {
 
 
 
-
-export default App
+export default connect()(App)
 
 

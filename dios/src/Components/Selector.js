@@ -3,7 +3,7 @@ import ApiComponent from "./ApiComponent"
 import { connect } from 'react-redux';
 
 
-export class Selector extends Component {
+class Selector extends Component {
 
 
   constructor(props) {
@@ -38,7 +38,7 @@ export class Selector extends Component {
 }
 
    entrenadores() {
-    const pronvincias = ["Lucas", "Pedro", "Ash", "Misty", "Pepe", "Alberto", "Julio", "Andrea", "Ana"]
+    const pronvincias = ["Elegir entrenador","Lucas", "Pedro", "Ash", "Misty", "Pepe", "Alberto", "Julio", "Andrea", "Ana"]
     return pronvincias.map(prov => <option>{prov}</option>);
 }
 

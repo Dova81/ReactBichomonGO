@@ -7,7 +7,7 @@ import {PrimerDivMedio} from "./PrimerDivMedio";
 import { connect } from 'react-redux';
 import {Router, Route} from "react-router"
 
-export class PagStats extends Component {
+class PagStats extends Component {
 
   constructor(props) {
     super(props);
