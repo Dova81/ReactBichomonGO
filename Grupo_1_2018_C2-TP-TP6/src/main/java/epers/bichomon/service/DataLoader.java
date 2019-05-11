@@ -96,10 +96,10 @@ public class DataLoader implements ApplicationRunner {
 
         bichoService.buscar("Misty");
 
-        Bicho b1 = crearBicho("Rojomon");
-        Bicho b2 = crearBicho("Rojomon");
+        Bicho b1 = crearBicho("Celestemon");
+        Bicho b2 = crearBicho("Azulmon");
         newEntrenador("Pepe", "Poke", new HashSet<>(Arrays.asList(b1, b2)));
-        bichoService.abandonar("Pepe", b1.getID());
+
 
         b1 = crearBicho("Amarillomon");
         b2 = crearBicho("Amarillomon");
@@ -131,10 +131,10 @@ public class DataLoader implements ApplicationRunner {
     private void createEspecies() {
         especieDAO.save(new Especie("Rojomon", TipoBicho.FUEGO, 100,"https://wikimon.net/images/thumb/1/1b/Agumon_tri2.jpg/200px-Agumon_tri2.jpg"));
         especieDAO.save(new Especie("Amarillomon", TipoBicho.AIRE, 300,"https://cdn.bulbagarden.net/upload/thumb/e/e2/133Eevee.png/250px-133Eevee.png"));
-        especieDAO.save(new Especie("Verdemon", TipoBicho.PLANTA, 500,"https://i1.wp.com/blog.kippnj.org/wp-content/uploads/2017/08/jon-snow.jpg"));
+        especieDAO.save(new Especie("Verdemon", TipoBicho.PLANTA, 500,"https://img.rankedboost.com/wp-content/uploads/2018/10/Charizard-Pokemon-Lets-GO.png"));
         especieDAO.save(new Especie("Violetamon", TipoBicho.TIERRA, 500,"https://avatarfiles.alphacoders.com/510/51068.jpg"));
-        especieDAO.save(new Especie("Azulmon", TipoBicho.ELECTRICIDAD, 500, "https://cdn.bulbagarden.net/upload/thumb/3/36/132Ditto.png/250px-132Ditto.png"));
-        especieDAO.save(new Especie("Naranjamon", TipoBicho.CHOCOLATE, 500,"https://cdnvos.lavoz.com.ar/sites/default/files/styles/width_1072/public/nota_periodistica/RF1.jpg"));
+        especieDAO.save(new Especie("Azulmon", TipoBicho.ELECTRICIDAD, 500, "https://cdn.bulbagarden.net/upload/thumb/4/41/130Gyarados.png/250px-130Gyarados.png"));
+        especieDAO.save(new Especie("Naranjamon", TipoBicho.CHOCOLATE, 500,"https://cdn.bulbagarden.net/upload/thumb/9/90/257Blaziken.png/1200px-257Blaziken.png"));
         especieDAO.save(new Especie("Marronmon", TipoBicho.AGUA, 500,"https://bucket3.glanacion.com/anexos/fotos/87/2847787w380.jpg"));
         especieDAO.save(new Especie("Lilamon", TipoBicho.AIRE, 500,"https://cdn.tn.com.ar/sites/default/files/styles/420x236/public/2019/04/07/mirtha.jpg"));
         especieDAO.save(new Especie("Celestemon", TipoBicho.AGUA, 500, "https://cdn.bulbagarden.net/upload/thumb/7/78/150Mewtwo.png/250px-150Mewtwo.png"));
