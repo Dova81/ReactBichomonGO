@@ -3,7 +3,7 @@ import './App.css';
 import ApiComponent from "./ApiComponent"
 import {DivIzquierda} from "./DivIzquierda";
 import {DivDerecha} from "./DivDerecha";
-import {PrimerDivMedio} from "./PrimerDivMedio";
+import PrimerDivMedio from "./PrimerDivMedio";
 import { connect } from 'react-redux';
 import {Router, Route} from "react-router"
 

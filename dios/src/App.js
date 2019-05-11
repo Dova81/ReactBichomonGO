@@ -6,6 +6,7 @@ import {BrowserRouter} from "react-router-dom";
 import { Switch, Route } from 'react-router';
 import PagStats from "./Components/PagStats"
 import Selector from "./Components/Selector"
+import Pokemon from "./Components/PokemonsComponent/pokemonComponent"
 import { connect } from 'react-redux';
 
 
@@ -23,7 +24,8 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             <Route exact path="/" render={(props) => <Selector {...props} />} />
-            <Route exact path={"/entrenador"} render={(props) => <PagStats {...props} />} />
+            <Route exact path="/entrenador" render={(props) => <PagStats {...props} />} />
+            <Route exact path={"/entrenador/pokemon"} render={(props) => <Pokemon {...props} />} />
           </Switch>
         </BrowserRouter>  
       
