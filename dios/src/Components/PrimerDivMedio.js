@@ -1,17 +1,25 @@
 import React, { Component } from 'react';
-import {withRouter} from "react-router-dom";
+
+import {withRouter, Link} from "react-router-dom";
 import "./Css/PrimerDiv.css"
 
 
 class PrimerDivMedio extends Component {
 
   dameFotos (bichos){
-    return bichos.map(b => <img onClick={this.verStats} src={b.especie.urlFoto} alt={b.especie.nombre} className="ajustarGim" />)
+    return bichos.map(b => 
+      <Link to={{
+        pathname:'/entrenador/pokemon',
+        state:{
+          pokemon:b
+        }
+      }}>
+      
+    <img src={b.especie.urlFoto} alt={b.especie.nombre} className="ajustarGim" />
+    </Link>
+  )
   }
 
- verStats =() =>{
-  this.props.history.push("/entrenador/pokemon")   
- }
     
   render() {
     
