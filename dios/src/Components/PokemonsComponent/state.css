@@ -1,0 +1,18 @@
+.containerEspecial {
+    display: block;
+    margin-left: 15%;
+    margin-top: 15% ;
+    
+  }
+
+  .divBorderStat
+{
+float: left;
+width:88%;
+height:100%;
+border: 5px solid;
+padding: 0px;
+border-image: url(../DivsLadoIzquierdo/Imagenes/wood.png) 50 ;
+}
+  
+  
