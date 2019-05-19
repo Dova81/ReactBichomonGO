@@ -9,7 +9,7 @@ export class SegundoDiv extends Component {
 
       <div className='container divBorder'>
         <div className='row'>
-          <div className="col-lg-6">
+          <div className="col-lg-5">
             <p>            
             <img src={ require('./Imagenes/red.png')  } alt="" className="acomodarRed" />
             </p>                                       

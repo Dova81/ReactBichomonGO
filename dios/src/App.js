@@ -5,7 +5,7 @@ import ApiComponent from "./Components/ApiComponent"
 import {BrowserRouter} from "react-router-dom";
 import { Switch, Route } from 'react-router';
 import PagStats from "./Components/PagStats"
-import Selector from "./Components/Selector"
+import Selector from "./Components/Selector/Selector"
 import Pokemon from "./Components/PokemonsComponent/pokemonComponent"
 import { connect } from 'react-redux';
 

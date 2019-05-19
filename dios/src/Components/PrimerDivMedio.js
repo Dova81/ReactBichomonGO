@@ -25,7 +25,7 @@ class PrimerDivMedio extends Component {
     
     return (
       
-                <div className="col-lg-5 divBorder noPadding backgroundPokemon">
+                <div className="col-lg-5 divBorder noPadding backgroundPokemon divAy">
                 {this.dameFotos(this.props.pokes.bichos)}
                 </div>
 

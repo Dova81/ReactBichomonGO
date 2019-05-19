@@ -74,17 +74,10 @@
   position: relative;
 }
 
-.backgroundPokemon {
-  border-radius: 25px;
-  background: #fffff0;
-  padding: 10px; 
-  width:100%;
-  height: 150px; 
-  float: right;
-}
+
 
 .pixel{
-  font-size: 60%;
+  font-size: 80%;
   font-family: 'Press Start 2P';
 }
 
@@ -92,17 +85,6 @@ br{
   margin: 5px
 }
 
-.centrarSelector {
-  display: block;
-  width:'500px';
-  margin-top: 20% ;
-  text-align:center;
-  }
-
-  select {
-    display: block;
-    margin: 0 auto;
-    }
 
 @keyframes App-logo-spin {
   from {

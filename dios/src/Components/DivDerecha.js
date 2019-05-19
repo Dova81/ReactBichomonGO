@@ -9,7 +9,7 @@ export class DivDerecha extends Component {
 
     return (
       
-    <div className="col-lg-4 noPadding">
+    <div className="col-lg-4 noPadding divAy">
        <Primero/>
        <Segundo/>
     </div>

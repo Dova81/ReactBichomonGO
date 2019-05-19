@@ -17,7 +17,7 @@ class PagStats extends Component {
   render() {
     return (
      
-      <div>
+      <div className='divAy'>
             
             { this.props.user && <DivIzquierda entrenador={this.props.user}/>}
             
