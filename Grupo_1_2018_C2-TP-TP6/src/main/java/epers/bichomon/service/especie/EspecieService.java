@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("especies")
 @Transactional(readOnly = true)
+@CrossOrigin(origins = "http://localhost:3000")
 public class EspecieService {
 
     private EspecieDAO especieDAO;

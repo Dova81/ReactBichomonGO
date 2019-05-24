@@ -14,6 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("leaderboard")
 @Transactional(readOnly = true)
+
 public class LeaderboardService {
 
     private EntrenadorDAO entrenadorDAO;
