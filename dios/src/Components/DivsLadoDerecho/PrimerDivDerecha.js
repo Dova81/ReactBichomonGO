@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {Button} from 'reactstrap'
+import ApiComponent from "../ApiComponent"
+import { connect } from 'react-redux';
 
 
 
@@ -9,32 +11,51 @@ const imgBR="./Imagenes/mapaRedBotDerecha.png";
 const imgBI="./Imagenes/mapaRedBotIzquierda.png";
 const base="./Imagenes/mapa.jpg"
 
-export class PrimerDivDerecha extends Component {
+class PrimerDivDerecha extends Component {
 
   constructor(props){
     super(props);
+
     this.state ={
       buttonTR:base,
     }
   }
 
+  settearEntrenador(lugar){
+    
+    
+    ApiComponent.putMover('mapa/mover/'+this.props.user.nombre+'/'+lugar)
+    .then(responder =>this.props.dispatch({
+      type:"SET",
+      payload:responder
+    }))
+   }
+
   cambiarImagenTR(){
+
     this.setState({buttonTR:imgTR});
+    
+    this.settearEntrenador('Plantalandia');
   }
   
   cambiarImagenTI(){ 
     
     this.setState({buttonTR:imgTI})
+    this.settearEntrenador('St.Blah');
   }
 
   cambiarImagenBR(){
     
     this.setState({buttonTR:imgBR})
+
+    this.settearEntrenador('Tibet Dojo');
   }
 
   cambiarImagenBI(){
     
     this.setState({buttonTR:imgBI})
+
+    this.settearEntrenador('CobraKai');
   }
 
 
@@ -59,4 +80,11 @@ export class PrimerDivDerecha extends Component {
   }
 }
 
-export default PrimerDivDerecha;
+const mapStateToProps = (state) => {
+  return{
+    user: state.entrenador,  
+  };
+  
+};
+
+export default connect(mapStateToProps)(PrimerDivDerecha)

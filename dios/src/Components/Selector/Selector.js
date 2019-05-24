@@ -70,12 +70,6 @@ class Selector extends Component {
   }
 } 
 
-const mapStateToProps = (state) => {
-  
-  return{
-    user: state.entrenador,  
-  };
-  
-};
 
-export default connect(mapStateToProps)(Selector)
+
+export default connect()(Selector)
