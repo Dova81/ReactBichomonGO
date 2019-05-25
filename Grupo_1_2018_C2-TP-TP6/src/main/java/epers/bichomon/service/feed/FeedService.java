@@ -7,10 +7,7 @@ import epers.bichomon.model.entrenador.Entrenador;
 import epers.bichomon.model.evento.Evento;
 import epers.bichomon.model.ubicacion.Ubicacion;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.NoResultException;
 import java.util.List;
@@ -19,6 +16,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("feed")
 @Transactional(readOnly = true)
+@CrossOrigin(origins = "http://localhost:3000")
 public class FeedService {
 
     private EventoDAO eventoDAO;

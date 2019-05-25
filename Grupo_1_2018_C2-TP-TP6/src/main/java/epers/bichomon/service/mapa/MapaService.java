@@ -17,6 +17,7 @@ import java.util.function.ToIntBiFunction;
 @RestController
 @RequestMapping("mapa")
 @Transactional(readOnly = true)
+@CrossOrigin(origins = "http://localhost:3000")
 public class MapaService {
 
     private UbicacionDAO ubicacionDAO;
@@ -40,7 +41,7 @@ public class MapaService {
         return costo;
     }
 
-    private void moverA(String nombreEntrenador, String nuevaUbicacion, ToIntBiFunction<Ubicacion, Ubicacion> viaje) {
+    private Entrenador moverA(String nombreEntrenador, String nuevaUbicacion, ToIntBiFunction<Ubicacion, Ubicacion> viaje) {
         Entrenador entrenador = entrenadorDAO.findByNombre(nombreEntrenador);
         String origen = entrenador.getUbicacion().getNombre();
         if (origen.equals(nuevaUbicacion)) {
@@ -51,12 +52,13 @@ public class MapaService {
         entrenador.moverA(ubicacion);
         entrenadorDAO.save(entrenador);
         eventoDAO.save(new EventoArribo(entrenador.getNombre(), origen, nuevaUbicacion));
+        return entrenador;
     }
 
     @Transactional
     @PutMapping("/mover/{entrenador}/{ubicacion}")
-    public void mover(@PathVariable String entrenador, @PathVariable String ubicacion) {
-        moverA(entrenador, ubicacion, ubicacionDAO::viajeMasBarato);
+    public Entrenador mover(@PathVariable String entrenador, @PathVariable String ubicacion) {
+        return moverA(entrenador, ubicacion, ubicacionDAO::viajeMasBarato);
     }
 
     @Transactional

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("entrenador")
 @Transactional
+@CrossOrigin(origins = "http://localhost:3000")
 public class EntrenadorService {
 
     private EntrenadorDAO entrenadorDAO;

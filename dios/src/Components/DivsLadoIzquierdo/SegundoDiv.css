@@ -41,3 +41,10 @@ border-image: url(./Imagenes/wood.png) 50 ;
     padding: 5%
 }
 
+
+.textarea {	
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;	
+    width: 100%;
+    }

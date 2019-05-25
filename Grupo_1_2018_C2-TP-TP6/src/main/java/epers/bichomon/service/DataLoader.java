@@ -169,6 +169,9 @@ public class DataLoader implements ApplicationRunner {
         ubicacionDAO.save(new Dojo("CobraKai"));
         ubicacionDAO.save(new Dojo("Miyagi"));
         ubicacionDAO.conectar("St.Blah", "Plantalandia", TipoCamino.Aereo);
+        ubicacionDAO.conectar("St.Blah", "Tibet Dojo", TipoCamino.Aereo);
+        ubicacionDAO.conectar("St.Blah", "CobraKai", TipoCamino.Aereo);
+
         ubicacionDAO.conectar("St.Blah", "Agualandia", TipoCamino.Terrestre);
         ubicacionDAO.conectar("Agualandia", "St.Blah", TipoCamino.Terrestre);
         ubicacionDAO.conectar("Agualandia", "Plantalandia", TipoCamino.Maritimo);
