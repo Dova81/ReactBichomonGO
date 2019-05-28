@@ -19,26 +19,30 @@ class PokemonComponent extends Component {
   } 
   }
 
+  
+    
+  
+
   renderData(){
     return(
-    <div class="row  divBorderStat  backgroundPokemon pixel">  
-    <div className='col-md-3'>
-    <img src={this.state.urlFoto} alt={this.state.nombre} className="ajustar" />
-    </div>
-    <div className='col-md-2'>
-    <h3>
-    Nombre:{ this.state.nombre}<br/>
-    Tipo:{this.state.tipo}<br/>
-    Victorias:{this.state.victorias}<br/>
-    Fecha de captura:{this.state.fechaCaptura}<br/>
-    </h3>
-    </div>
+    <div class="row  divBorderStat  backgroundPokemon">  
+        <div className='col-md-4'>
+            <img src={this.state.urlFoto} alt={this.state.nombre} className="ajustar" />
+        </div>
+        <div className='col-md-8 pixel'>
+            <h3>
+                <p>
+                Nombre:{ this.state.nombre}<br className="ancho"/>
+                Tipo:{this.state.tipo}<br className="ancho"/>
+                Victorias:{this.state.victorias}<br className="ancho"/>
+                Fecha de captura:{this.state.fechaCaptura}<br className="ancho"/>
+                </p>
+            </h3>
+        </div>
     </div>
     )}
 
   render() {
-    console.log(this.state)
-    
     
     return (
       
