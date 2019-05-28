@@ -21,20 +21,64 @@ border-image: url(../DivsLadoIzquierdo/Imagenes/wood.png) 50 ;
 
 }
 
+
+
 .typewriter-text {
   display: inline-block;
   overflow: hidden;
   letter-spacing: 2px;
-  animation: typing 5s steps(30, end)
-
+  animation: typing 2s steps(30, end),aparece 0s 2s forwards;
+  animation-delay: 2s;
+  visibility: hidden;
+  
 }
+
+.typewriter-text1 {
+    display: inline-block;
+    overflow: hidden;
+    letter-spacing: 2px;
+    animation: typing 2s steps(30, end),aparece 0s 4s forwards;
+    animation-delay: 4s;
+    visibility: hidden;
+    
+  }
+
+  .typewriter-text2 {
+    display: inline-block;
+    overflow: hidden;
+    letter-spacing: 2px;
+    animation: typing 2s steps(30, end),aparece 0s 6s forwards;
+    animation-delay: 6s;
+    visibility: hidden;
+    
+  }
+
+  .typewriter-text3 {
+    display: inline-block;
+    overflow: hidden;
+    letter-spacing: 2px;
+    animation: typing 2s steps(30, end),aparece 0s 8s forwards;
+    animation-delay: 8s;
+    visibility: hidden;
+    
+  }
+
+
+@keyframes aparece {
+    to   { visibility: visible; }
+}
+
+
+
+
+
 
 @keyframes typing {
   from { 
-      width: 0% 
+      width: 0%;
   }
   to { 
-      width: 100% 
+      width: 100%;
   }
 }
 
