@@ -8,6 +8,7 @@ import PagStats from "./Components/PagStats"
 import Selector from "./Components/Selector/Selector"
 import Pokemon from "./Components/PokemonsComponent/pokemonComponent"
 import { connect } from 'react-redux';
+import PeleaComponent from './Components/Pelea/peleaComponent'
 
 
 class App extends Component {
@@ -26,6 +27,7 @@ class App extends Component {
             <Route exact path="/" render={(props) => <Selector {...props} />} />
             <Route exact path="/entrenador" render={(props) => <PagStats {...props} />} />
             <Route exact path={"/entrenador/pokemon"} render={(props) => <Pokemon {...props} />} />
+            <Route exact path={"/entrenador/pelea"} render={(props) => <PeleaComponent {...props} />} />
           </Switch>
         </BrowserRouter>  
       

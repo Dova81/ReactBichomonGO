@@ -6,12 +6,13 @@ import "./Css/PrimerDiv.css"
 
 class PrimerDivMedio extends Component {
 
-  dameFotos (bichos){
+  dameFotos (bichos,nombreEntrenador){
     return bichos.map(b => 
       <Link to={{
         pathname:'/entrenador/pokemon',
         state:{
-          pokemon:b
+          pokemon:b,
+          entrenador:nombreEntrenador
         }
       }}>
       
@@ -26,7 +27,7 @@ class PrimerDivMedio extends Component {
     return (
       
                 <div className="col-lg-5 divBorder noPadding backgroundPokemon divAy">
-                {this.dameFotos(this.props.pokes.bichos)}
+                {this.dameFotos(this.props.pokes.bichos,this.props.pokes.nombre)}
                 </div>
 
     );

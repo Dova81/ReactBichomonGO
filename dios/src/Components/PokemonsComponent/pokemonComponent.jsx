@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './state.css'
+import {withRouter, Link} from "react-router-dom";
+import ApiComponent from "../ApiComponent"
+import {Button} from 'reactstrap'
 
 
 
@@ -8,7 +11,9 @@ class PokemonComponent extends Component {
   constructor(props){
     super(props);
     const pokemon =this.props.location.state.pokemon
+    const entrenador_= this.props.location.state.entrenador
     this.state = {
+     nombreEntrenador:entrenador_,
      idPoke:pokemon.id,
      nombre:pokemon.especie.nombre,
      tipo:pokemon.especie.tipo,
@@ -19,7 +24,18 @@ class PokemonComponent extends Component {
   } 
   }
 
+  pelear(){
+    ApiComponent.putDuelo('bichos/duelo/'+this.state.nombreEntrenador+'/'+this.state.idPoke)
+    .then(responder =>this.damePelea(responder))
+   }
   
+
+  damePelea(infoPelea){
+    this.props.history.push({
+      pathname: '/entrenador/pelea',
+      state: infoPelea,
+    })
+  }
     
   
 
@@ -36,7 +52,9 @@ class PokemonComponent extends Component {
                 Tipo:{this.state.tipo}<br className="ancho"/>
                 Victorias:{this.state.victorias}<br className="ancho"/>
                 Fecha de captura:{this.state.fechaCaptura}<br className="ancho"/>
+                
                 </p>
+                <Button onClick={this.pelear.bind(this)} color="danger">DUELO</Button>
             </h3>
         </div>
     </div>
