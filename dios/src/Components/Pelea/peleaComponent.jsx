@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './pelea.css';
 import gifPelea from './cambio.gif'
 import {Button} from 'reactstrap'
-
+import { connect } from 'react-redux';
+import ApiComponent from "../ApiComponent"
 
 
 class PeleaComponent extends Component {
@@ -11,13 +12,15 @@ class PeleaComponent extends Component {
     super(props);
     const informe_ =this.props.location.state
     this.state = {
-      ganador:informe_.ganador.especie.nombre,
-      perdedor:informe_.perdedor
+      entrenador:informe_.nombreEntrenador,
+      ganador:informe_.infoPelea.ganador.especie.nombre,
+      perdedor:informe_.infoPelea.perdedor
     } 
   }
 
   chequearCampeonInexistente(){
-    if(!this.perdedor){
+    
+    if(this.state.perdedor == undefined){
       return <p className='typewriter-text2'>No habia Campeon</p>
     }else{
       return <p className='typewriter-text2'>El Pokemon {this.state.perdedor.especie.nombre} Perdio</p>
@@ -25,6 +28,11 @@ class PeleaComponent extends Component {
   }
 
   volver(){
+    ApiComponent.getEntrenador('/entrenador/'+this.state.entrenador)
+    .then(responder =>this.props.dispatch({
+      type:"SET",
+      payload:responder
+    }))
     this.props.history.push('/entrenador',)
   }
    
@@ -59,4 +67,4 @@ class PeleaComponent extends Component {
   }
 }
 
-export default PeleaComponent;
+export default connect()(PeleaComponent);

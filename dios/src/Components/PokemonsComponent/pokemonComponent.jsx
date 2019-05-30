@@ -30,10 +30,13 @@ class PokemonComponent extends Component {
    }
   
 
-  damePelea(infoPelea){
+  damePelea(infoPelea_){
     this.props.history.push({
       pathname: '/entrenador/pelea',
-      state: infoPelea,
+      state: {
+        infoPelea:infoPelea_,
+        nombreEntrenador:this.state.nombreEntrenador,
+      },
     })
   }
     
