@@ -14,8 +14,16 @@ class PeleaComponent extends Component {
     this.state = {
       entrenador:informe_.nombreEntrenador,
       ganador:informe_.infoPelea.ganador.especie.nombre,
-      perdedor:informe_.infoPelea.perdedor
+      perdedor:informe_.infoPelea.perdedor,
+      ataques:informe_.infoPelea.ataques,
     } 
+  }
+
+
+  dameAtaques(){
+    return this.state.ataques.map(b => 
+     <p className={'typewriter-text'+this.state.ataques.indexOf(b)+3}>{b.atacante.especie.nombre} ataco por {b.puntos} de daño</p>
+    )
   }
 
   chequearCampeonInexistente(){
@@ -23,7 +31,7 @@ class PeleaComponent extends Component {
     if(this.state.perdedor == undefined){
       return <p className='typewriter-text2'>No habia Campeon</p>
     }else{
-      return <p className='typewriter-text2'>El Pokemon {this.state.perdedor.especie.nombre} Perdio</p>
+      return <p className='typewriter-text2'>{this.state.perdedor.especie.nombre} Perdio!</p>
     }
   }
 
@@ -47,9 +55,10 @@ class PeleaComponent extends Component {
         <img src={gifPelea} alt={'pum pum paw'} className="imgAjustar" />
         </div>
         <div className='col-md-3 pixel'>       
-          <p className='typewriter-text1'>El Pokemon {this.state.ganador} es Victorioso</p><br/>
+          <p className='typewriter-text1'>{this.state.ganador} es Victorioso!</p><br/>
           {this.chequearCampeonInexistente()}
-          <Button onClick={this.volver.bind(this)} color="danger">DUELO</Button>
+          {this.dameAtaques()}
+          <Button onClick={this.volver.bind(this)} color="danger">Inicio</Button>
         </div>
         
     </div>
