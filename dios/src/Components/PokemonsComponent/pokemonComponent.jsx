@@ -3,6 +3,10 @@ import './state.css'
 import {withRouter, Link} from "react-router-dom";
 import ApiComponent from "../ApiComponent"
 import {Button} from 'reactstrap'
+import Modal from 'react-modal';
+import ModalImage from 'react-modal-image'
+import gifRonny from './Ronny.gif'
+
 
 
 
@@ -13,6 +17,7 @@ class PokemonComponent extends Component {
     const pokemon =this.props.location.state.pokemon
     const entrenador_= this.props.location.state.entrenador
     this.state = {
+      modalIsOpen:false,
      nombreEntrenador:entrenador_,
      idPoke:pokemon.id,
      nombre:pokemon.especie.nombre,
@@ -22,13 +27,23 @@ class PokemonComponent extends Component {
      urlFoto:pokemon.especie.urlFoto
 
   } 
+  this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
   pelear(){
     ApiComponent.putDuelo('bichos/duelo/'+this.state.nombreEntrenador+'/'+this.state.idPoke)
-    .then(responder =>this.damePelea(responder))
+    .then(responder =>this.damePelea(responder)).catch(this.openModal())
    }
   
+   openModal() {
+    this.setState({modalIsOpen: true});
+  }
+
+  closeModal() {
+    this.setState({modalIsOpen: false});
+  }
+
 
   damePelea(infoPelea_){
     this.props.history.push({
@@ -44,7 +59,7 @@ class PokemonComponent extends Component {
 
   renderData(){
     return(
-    <div class="row  divBorderStat  backgroundPokemon">  
+    <div class="row  divBorderStat  backgroundPokemon"> 
         <div className='col-md-4'>
             <img src={this.state.urlFoto} alt={this.state.nombre} className="ajustar" />
         </div>
@@ -68,6 +83,17 @@ class PokemonComponent extends Component {
     return (
       
       <div class="container containerEspecial">
+         <Modal
+          isOpen={this.state.modalIsOpen}
+          onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal}
+          contentLabel='gifRonny'
+        >
+          <img src={gifRonny} alt='Ronny' className="" />
+          <p className='pixel'>
+          Ah ah ah, El pokemon no puede luchar porque no esta en un Gimnasio
+          </p>
+        </Modal>
         {this.renderData()}
       </div>
 
