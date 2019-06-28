@@ -7,8 +7,10 @@
 
   .divBorderStat
 {
+margin-top:-40px;
+margin-left:-70px;
 float: left;
-width:88%;
+width:75%;
 height:100%;
 border: 5px solid;
 padding: 0px;
