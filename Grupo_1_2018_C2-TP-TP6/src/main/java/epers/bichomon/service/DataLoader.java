@@ -173,8 +173,8 @@ public class DataLoader implements ApplicationRunner {
         ubicacionDAO.conectar("St.Blah", "CobraKai", TipoCamino.Aereo);
 
         ubicacionDAO.conectar("St.Blah", "Agualandia", TipoCamino.Terrestre);
-        ubicacionDAO.conectar("Agualandia", "St.Blah", TipoCamino.Terrestre);
-        ubicacionDAO.conectar("Agualandia", "Plantalandia", TipoCamino.Maritimo);
+
+
         ubicacionDAO.conectar("Plantalandia", "Agualandia", TipoCamino.Maritimo);
         ubicacionDAO.conectar("Agualandia", "Lagartolandia", TipoCamino.Maritimo);
         ubicacionDAO.conectar("Lagartolandia", "Agualandia", TipoCamino.Maritimo);

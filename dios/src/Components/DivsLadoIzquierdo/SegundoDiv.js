@@ -4,7 +4,7 @@ import "./SegundoDiv.css";
 
 export class SegundoDiv extends Component {
   render() {
-    console.log(this.props.entrenador);
+
     
     return (
       
@@ -19,7 +19,7 @@ export class SegundoDiv extends Component {
           <div className='col-lg-6 backgroundPokemon pixel'>
           <p>
           <u>Entrenador</u>: { this.props.entrenador.nombre}<br/>
-          <u>Ubicacio</u>n: {this.props.entrenador.ubicacion.nombre}<br/>
+          <u>Ubicacion</u>: {this.props.entrenador.ubicacion.nombre}<br/>
           <u>Nivel</u>: {this.props.entrenador.nivel}<br/>
           <u>Billetera</u>: {this.props.entrenador.monedas}<br/>
           </p>

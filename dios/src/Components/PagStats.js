@@ -22,7 +22,8 @@ class PagStats extends Component {
             { this.props.user && <DivIzquierda entrenador={this.props.user}/>}
             
             { this.props.user && <PrimerDivMedio pokes={this.props.user}/>}
-            <DivDerecha/>
+            { this.props.user && <DivDerecha entrenador={this.props.user}/>}
+           
       
       </div>
       
