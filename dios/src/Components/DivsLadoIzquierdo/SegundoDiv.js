@@ -16,7 +16,7 @@ export class SegundoDiv extends Component {
             <img src={ require('./Imagenes/red.png')  } alt="" className="acomodarRed" />
             </p>                                       
           </div>
-          <div className='col-lg-6 backgroundPokemon pixel'>
+          <div className='col-lg-6 backgroundPokemon pixel centrarStats'>
           <p>
           <u>Entrenador</u>: { this.props.entrenador.nombre}<br/>
           <u>Ubicacion</u>: {this.props.entrenador.ubicacion.nombre}<br/>

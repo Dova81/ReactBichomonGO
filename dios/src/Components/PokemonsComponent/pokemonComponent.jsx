@@ -55,6 +55,11 @@ class PokemonComponent extends Component {
     })
   }
     
+  volver(){
+    this.props.history.push({
+      pathname: '/entrenador',
+    })
+  }
   
 
   renderData(){
@@ -73,6 +78,7 @@ class PokemonComponent extends Component {
                 
                 </p>
                 <Button onClick={this.pelear.bind(this)} color="danger">DUELO</Button>
+                <Button onClick={this.volver.bind(this)} color="success">VOLVER</Button>
             </h3>
         </div>
     </div>

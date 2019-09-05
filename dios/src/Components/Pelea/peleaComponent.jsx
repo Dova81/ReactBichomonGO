@@ -61,7 +61,7 @@ class PeleaComponent extends Component {
           {this.dameAtaques()}
           <p className={'typewriter-text' +this.state.cssGanador }>{this.state.ganador} es Victorioso!</p><br/>  
           {this.chequearCampeonInexistente()}<br/>
-          <Button onClick={this.volver.bind(this)} color="danger">Inicio</Button>
+          <Button onClick={this.volver.bind(this)} color="success">VOLVER</Button>
         </div>
         
     </div>

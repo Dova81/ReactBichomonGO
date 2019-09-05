@@ -12,8 +12,10 @@ class Selector extends Component {
 
   constructor(props) {
     super(props);
+    this.selectRef= React.createRef();
     this.state = {
         entrenador:'',
+        isVisible:true,
     } 
 
 }
@@ -27,6 +29,8 @@ class Selector extends Component {
       type:"SET",
       payload:responder
     }))
+
+    document.addEventListener("keydown", this.handleKeyPress, false);
    }
 
    setEntrenador(elem){
@@ -37,6 +41,15 @@ class Selector extends Component {
 
     this.props.history.push("/entrenador")    
 }
+
+handleKeyPress = (event) => {
+  if(event.key === 'Enter'){
+    this.setState({isVisible:false,})
+    this.selectRef.current.focus(); 
+  }
+}
+
+
 
    entrenadores() {
 
@@ -53,7 +66,7 @@ class Selector extends Component {
 
   render() {
     return (
-        <div>
+        <div onKeyPress={this.handleKeyPress}>
           <div>
             <audio src={tema} autoplay="autoplay" loop="" ></audio>
             {this.renderImagen()}
@@ -61,10 +74,12 @@ class Selector extends Component {
 
           <div id='fadeLong' class="centrarSelector">
             <form>
-            <select class="form-control col-sm-4" id="selectProvinicias" onChange={event => this.setEntrenador(event)}>{this.entrenadores()}</select>
+            <select ref={this.selectRef} class="form-control col-sm-4" id="selectProvinicias" onChange={event => this.setEntrenador(event)}>{this.entrenadores()}</select>
             </form>
           </div>
-          <div class="inner"><img src={start} alt='logo' className="ajustarGim" /></div>
+          <div class="inner">
+            {this.state.isVisible?<img src={start} alt='logo' className="ajustarGim" />:null}
+          </div>
         </div>  
     );
   }
