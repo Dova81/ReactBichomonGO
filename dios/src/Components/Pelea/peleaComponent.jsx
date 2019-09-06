@@ -13,7 +13,7 @@ class PeleaComponent extends Component {
     const informe_ =this.props.location.state
     this.state = {
       entrenador:informe_.nombreEntrenador,
-      ganador:informe_.infoPelea.ganador.especie.nombre,
+      ganador:informe_.infoPelea.ganador,
       perdedor:informe_.infoPelea.perdedor,
       ataques:informe_.infoPelea.ataques,
       cssGanador: informe_.infoPelea.ataques.length + 1,
@@ -53,13 +53,23 @@ class PeleaComponent extends Component {
     
     return(
     <div class="row  divBorderStat  backgroundPokemon">
-        <div className='col-md-9 noMargin'>  
-        <img src={gifPelea} alt={'pum pum paw'} className="imgAjustar" />
+        <div className='col-md-9 noMargin'>
+
+            <span className="row imageContainer">
+              <img src={this.state.ganador.especie.urlFoto} alt={this.state.ganador.especie.nombre} className="ajustarGim imagenGanador"  />
+              <img src={this.state.perdedor.especie.urlFoto} alt={this.state.perdedor.especie.nombre} className="ajustarGim imagenPerdedor"  />
+              <p className="nombrePerdedor">{this.state.perdedor.especie.nombre}</p><br/>
+              <p className="nombreGanador">{this.state.ganador.especie.nombre}</p><br/>
+            </span>
+
+
+            <img src={gifPelea} alt={'pum pum paw'} className="imgAjustar" />
+
         </div>
         <div className='col-md-3 pixel'>       
           
           {this.dameAtaques()}
-          <p className={'typewriter-text' +this.state.cssGanador }>{this.state.ganador} es Victorioso!</p><br/>  
+          <p className={'typewriter-text' +this.state.cssGanador }>{this.state.ganador.especie.nombre} es Victorioso!</p><br/>
           {this.chequearCampeonInexistente()}<br/>
           <Button onClick={this.volver.bind(this)} color="success">VOLVER</Button>
         </div>

@@ -22,6 +22,40 @@
     margin-top: 12% ;
     
 }
+
+.imageContainer{
+  position: relative;
+  width: 0px;
+  height: 0px;
+}
+
+.imagenGanador{
+  position: relative;
+  bottom: -137px;
+  width: 130px;
+  right: -121px;
+}
+
+.nombrePerdedor {
+  font-size: 2em;
+  position: absolute;
+  left: 60px;
+  top: 50px;
+}
+
+.nombreGanador{
+  font-size: 2em;
+  position: absolute;
+  left: 370px;
+  top: 202px;
+}
+
+.imagenPerdedor{
+  position: relative;
+  top: -100px;
+  right: -400px;
+  width: 130px;
+}
   
   .typewriter-text0 {
       display: inline-block;

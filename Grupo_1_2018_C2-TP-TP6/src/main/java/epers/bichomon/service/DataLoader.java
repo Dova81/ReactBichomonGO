@@ -139,7 +139,7 @@ public class DataLoader implements ApplicationRunner {
         especieDAO.save(new Especie("Lilamon", TipoBicho.AIRE, 500,"https://cdn.tn.com.ar/sites/default/files/styles/420x236/public/2019/04/07/mirtha.jpg"));
         especieDAO.save(new Especie("Celestemon", TipoBicho.AGUA, 500, "https://cdn.bulbagarden.net/upload/thumb/7/78/150Mewtwo.png/250px-150Mewtwo.png"));
         especieDAO.save(new Especie("Ocremon", TipoBicho.FUEGO, 500,"https://bucket2.glanacion.com/anexos/fotos/84/2858084w380.jpg"));
-        especieDAO.save(new Especie("Turquesamon", TipoBicho.PLANTA, 1500,"https://media.eldestapeweb.com/adjuntos/177/imagenes/000/627/0000627332.jpg"));
+        especieDAO.save(new Especie("Turquesamon", TipoBicho.PLANTA, 500,"http://static.pokemonpets.com/images/monsters-images-800-800/95-Onix.png"));
 
         Especie Dragonmon = especieDAO.save(new Especie("Dragonmon", TipoBicho.FUEGO, 10));
         Especie Reptilomon = especieDAO.save(new Especie("Reptilomon", TipoBicho.FUEGO, 10,
