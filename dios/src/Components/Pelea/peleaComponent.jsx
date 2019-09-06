@@ -57,7 +57,7 @@ class PeleaComponent extends Component {
 
             <span className="row imageContainer">
               <img src={this.state.ganador.especie.urlFoto} alt={this.state.ganador.especie.nombre} className="ajustarGim imagenGanador"  />
-              <img src={this.state.perdedor.especie.urlFoto} alt={this.state.perdedor.especie.nombre} className="ajustarGim imagenPerdedor"  />
+              {this.state.perdedor.especie.nombre &&<img src={this.state.perdedor.especie.urlFoto} alt={this.state.perdedor.especie.nombre} className="ajustarGim imagenPerdedor"  />}
               <p className="nombrePerdedor">{this.state.perdedor.especie.nombre}</p><br/>
               <p className="nombreGanador">{this.state.ganador.especie.nombre}</p><br/>
             </span>
